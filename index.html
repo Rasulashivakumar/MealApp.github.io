@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meal App</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="favoritesLink">My Favorites</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page">
+            <h2>Search for Meals</h2>
+            <input type="text" id="searchInput" placeholder="Search for a meal">
+            <div id="searchResults" class="results">
+                <!-- Display search results here -->
+            </div>
+        </section>
+        
+        <!-- Favorites Page (hidden by default) -->
+        <section id="favorites" class="page" style="display: none;">
+            <h2>My Favorite Meals</h2>
+            <div id="favoriteResults" class="results">
+                <!-- Display favorite meals here -->
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
