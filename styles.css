@@ -52,7 +52,7 @@ input {
     text-align: center;
 }
 
-.favorite-button, .remove-button {
+.favorite-button, .remove-button, .details-button {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -60,6 +60,6 @@ input {
     cursor: pointer;
 }
 
-.favorite-button:hover, .remove-button:hover {
+.favorite-button:hover, .remove-button:hover, .details-button:hover {
     background-color: #2980b9;
 }
