@@ -27,6 +27,21 @@ function displayMeals(meals, container) {
     });
 }
 
+// Function to fetch and display meal details
+function getMealDetails(mealId) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+        .then(response => response.json())
+        .then(data => {
+            const mealDetails = data.meals[0];
+            displayMealDetails(mealDetails);
+        });
+}
+
+// Function to display meal details
+function displayMealDetails(meal) {
+    alert(`Meal Name: ${meal.strMeal}\nCategory: ${meal.strCategory}\nInstructions: ${meal.strInstructions}`);
+}
+
 // Function to create a meal card
 function createMealCard(meal) {
     const mealCard = document.createElement('div');
@@ -35,7 +50,9 @@ function createMealCard(meal) {
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
         <h3>${meal.strMeal}</h3>
         <button class="favorite-button" onclick="toggleFavorite('${meal.idMeal}')">&#10084;</button>
+        <button class="details-button" onclick="getMealDetails('${meal.idMeal}')">Details</button>
     `;
+
     return mealCard;
 }
 
